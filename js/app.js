@@ -57,9 +57,9 @@ function spark(ind,hasta){
   return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Serie mensual de ${esc(ind.n)}">
    ${[.25,.5,.75].map(f=>`<line x1="${P}" x2="${W-P}" y1="${P+f*(H-2*P)}" y2="${P+f*(H-2*P)}" stroke="var(--line)"/>`).join('')}
    <line x1="${P}" x2="${W-P}" y1="${y(ind.meta)}" y2="${y(ind.meta)}" stroke="var(--ok)" stroke-dasharray="4 4"/>
-   <polygon points="${x(0)},${H-P} ${pts} ${x(last)},${H-P}" fill="var(--accent)" opacity=".10"/>
-   <polyline points="${pts}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
-   <circle cx="${x(last)}" cy="${y(s[last])}" r="4" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/></svg>`;
+   <polygon class="area" points="${x(0)},${H-P} ${pts} ${x(last)},${H-P}" fill="var(--accent)" opacity=".10"/>
+   <polyline class="linea" pathLength="1" points="${pts}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+   <circle class="punto" cx="${x(last)}" cy="${y(s[last])}" r="4" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/></svg>`;
 }
 function indCard(ind){
   const s=ind.serie,v0=s[0],v=s[11],d=v-v0,bien=(ind.mejor==='baja')?d<0:d>0;
@@ -82,10 +82,10 @@ function renderResumen(){
    <h1>Un año de gestión en cifras, hitos y compromisos</h1>
    <p class="lead">Este informe recorre los doce meses del primer año de gobierno: qué se prometió, qué se hizo y cómo cambiaron los indicadores principales. Cada dato enlaza a su compromiso y a su fuente.</p></div>
   <section class="grid g4">
-   <div class="card kpi"><div class="v num">${C.length}</div><div class="l">compromisos de gobierno en seguimiento</div></div>
-   <div class="card kpi"><div class="v num">${cumpl}</div><div class="l">compromisos cumplidos al ${esc(DATA.meta.corte)}</div></div>
-   <div class="card kpi"><div class="v num">${avg} %</div><div class="l">avance promedio del conjunto</div></div>
-   <div class="card kpi"><div class="v num">${H.length}</div><div class="l">hitos registrados, ${norm} de ellos normativos</div></div>
+   <div class="card kpi"><div class="v num" data-count="${C.length}">${C.length}</div><div class="l">compromisos de gobierno en seguimiento</div></div>
+   <div class="card kpi"><div class="v num" data-count="${cumpl}">${cumpl}</div><div class="l">compromisos cumplidos al ${esc(DATA.meta.corte)}</div></div>
+   <div class="card kpi"><div class="v num" data-count="${avg}" data-suf=" %">${avg} %</div><div class="l">avance promedio del conjunto</div></div>
+   <div class="card kpi"><div class="v num" data-count="${H.length}">${H.length}</div><div class="l">hitos registrados, ${norm} de ellos normativos</div></div>
   </section>
   <section><div class="sechead"><h2>Estado de los compromisos</h2><a href="#compromisos">Ver todos</a></div><div class="card">${stackEstados(C)}</div></section>
   <section><div class="sechead"><h2>Avance por eje</h2><a href="#ejes">Ver ejes</a></div>
@@ -189,8 +189,33 @@ document.addEventListener('click',ev=>{const b=ev.target.closest('[data-comp]');
 
 /* ---------------- enrutador ---------------- */
 let curMes=0;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Transición entre vistas: usa la View Transitions API si el navegador la
+   tiene (Chrome, Edge, Safari 18+). Si no, cambia la vista sin animación.
+   Entre meses, la dirección (adelante/atrás) decide hacia dónde se desliza. */
 function route(){
-  const h=decodeURIComponent(location.hash.slice(1))||'resumen';let m,nav=h;curMes=0;
+  const h=decodeURIComponent(location.hash.slice(1))||'resumen';
+  const m=h.match(/^mes-(\d{1,2})$/),prev=curMes;
+  document.documentElement.dataset.dir=(m&&prev)?(+m[1]>prev?'next':'prev'):'fade';
+  if(!document.startViewTransition||reduce){dibujar(h);animar();return}
+  document.startViewTransition(()=>dibujar(h)).ready.then(animar,animar);
+}
+
+/* Animaciones dentro de la vista nueva: tarjetas escalonadas (CSS con --i)
+   y contadores que suben desde 0 hasta su valor. */
+function animar(){
+  view.querySelectorAll('.card').forEach((el,i)=>el.style.setProperty('--i',Math.min(i,14)));
+  if(reduce)return;
+  view.querySelectorAll('[data-count]').forEach(el=>{
+    const fin=+el.dataset.count,suf=el.dataset.suf||'',t0=performance.now(),dur=900;
+    const paso=t=>{const k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3);el.textContent=Math.round(fin*e)+suf;if(k<1)requestAnimationFrame(paso)};
+    el.textContent='0'+suf;requestAnimationFrame(paso);
+  });
+}
+
+function dibujar(h){
+  let m,nav=h;curMes=0;
   closeComp();
   if(h==='resumen')renderResumen();
   else if((m=h.match(/^mes-(\d{1,2})$/))&&+m[1]>=1&&+m[1]<=12){curMes=+m[1];nav='mes';renderMes(curMes)}
