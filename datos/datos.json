@@ -1,0 +1,564 @@
+{
+  "meta": {
+    "institucion": "[Nombre de la institución]",
+    "titulo": "Informe Anual de Gestión",
+    "periodo": "Primer año de gobierno",
+    "inicio": [
+      2025,
+      6
+    ],
+    "corte": "31 de mayo de 2026",
+    "fuenteGeneral": "Ejemplo · reemplazar por la fuente oficial"
+  },
+  "ejes": [
+    {
+      "id": "seguridad",
+      "n": "Seguridad ciudadana",
+      "c": "#3b5b92",
+      "obj": "Reducir la violencia y recuperar el control territorial con prevención, inteligencia y presencia policial comunitaria."
+    },
+    {
+      "id": "economia",
+      "n": "Economía y empleo",
+      "c": "#2f7f86",
+      "obj": "Ordenar las finanzas públicas y crear condiciones para el empleo formal, con foco en jóvenes y pequeñas empresas."
+    },
+    {
+      "id": "salud",
+      "n": "Salud",
+      "c": "#8a4f8c",
+      "obj": "Ampliar la cobertura preventiva y reducir los tiempos de espera en la red pública."
+    },
+    {
+      "id": "educacion",
+      "n": "Educación",
+      "c": "#b0702a",
+      "obj": "Mejorar la infraestructura escolar y las competencias digitales de docentes y estudiantes."
+    },
+    {
+      "id": "infra",
+      "n": "Infraestructura y servicios",
+      "c": "#5d7a3a",
+      "obj": "Rehabilitar la red vial y ampliar el acceso a agua potable en zonas rurales y periurbanas."
+    }
+  ],
+  "compromisos": [
+    {
+      "id": "C01",
+      "eje": "seguridad",
+      "t": "Reducir en 20 % la tasa de homicidios intencionales",
+      "estado": "ejecucion",
+      "av": 65,
+      "plazo": "Dic. 2026",
+      "resp": "Ministerio del Interior",
+      "meta": "Tasa ≤ 25 por 100.000 hab."
+    },
+    {
+      "id": "C02",
+      "eje": "seguridad",
+      "t": "Construir 10 Unidades de Policía Comunitaria",
+      "estado": "ejecucion",
+      "av": 30,
+      "plazo": "Dic. 2026",
+      "resp": "Ministerio del Interior",
+      "meta": "10 UPC operativas"
+    },
+    {
+      "id": "C03",
+      "eje": "seguridad",
+      "t": "Expedir el reglamento de control de armas",
+      "estado": "cumplido",
+      "av": 100,
+      "plazo": "Dic. 2025",
+      "resp": "Presidencia",
+      "meta": "Reglamento publicado en Registro Oficial"
+    },
+    {
+      "id": "C04",
+      "eje": "economia",
+      "t": "Reducir en 10 % el gasto corriente",
+      "estado": "ejecucion",
+      "av": 70,
+      "plazo": "May. 2026",
+      "resp": "Ministerio de Finanzas",
+      "meta": "−10 % frente al año anterior"
+    },
+    {
+      "id": "C05",
+      "eje": "economia",
+      "t": "Aprobar la ley de fomento al empleo juvenil",
+      "estado": "cumplido",
+      "av": 100,
+      "plazo": "Mar. 2026",
+      "resp": "Ministerio del Trabajo",
+      "meta": "Ley aprobada y publicada"
+    },
+    {
+      "id": "C06",
+      "eje": "economia",
+      "t": "Colocar US$ 200 millones en crédito para pymes",
+      "estado": "retrasado",
+      "av": 25,
+      "plazo": "May. 2026",
+      "resp": "Banca pública",
+      "meta": "US$ 200 M colocados"
+    },
+    {
+      "id": "C07",
+      "eje": "salud",
+      "t": "Alcanzar 95 % de cobertura de vacunación infantil",
+      "estado": "ejecucion",
+      "av": 70,
+      "plazo": "Dic. 2026",
+      "resp": "Ministerio de Salud",
+      "meta": "95 % de cobertura"
+    },
+    {
+      "id": "C08",
+      "eje": "salud",
+      "t": "Agendamiento digital en 100 centros de salud",
+      "estado": "ejecucion",
+      "av": 40,
+      "plazo": "Dic. 2026",
+      "resp": "Ministerio de Salud",
+      "meta": "100 centros conectados"
+    },
+    {
+      "id": "C09",
+      "eje": "salud",
+      "t": "Abrir 2 hospitales del día",
+      "estado": "ejecucion",
+      "av": 50,
+      "plazo": "Jun. 2027",
+      "resp": "Ministerio de Salud",
+      "meta": "2 hospitales en funcionamiento"
+    },
+    {
+      "id": "C10",
+      "eje": "educacion",
+      "t": "Entregar kits escolares al 100 % de estudiantes",
+      "estado": "cumplido",
+      "av": 100,
+      "plazo": "Sep. 2025",
+      "resp": "Ministerio de Educación",
+      "meta": "Cobertura total del régimen"
+    },
+    {
+      "id": "C11",
+      "eje": "educacion",
+      "t": "Repotenciar 60 unidades educativas",
+      "estado": "retrasado",
+      "av": 42,
+      "plazo": "Abr. 2026",
+      "resp": "Ministerio de Educación",
+      "meta": "60 escuelas intervenidas"
+    },
+    {
+      "id": "C12",
+      "eje": "educacion",
+      "t": "Formar a 20.000 docentes en competencias digitales",
+      "estado": "ejecucion",
+      "av": 40,
+      "plazo": "Dic. 2026",
+      "resp": "Ministerio de Educación",
+      "meta": "20.000 docentes certificados"
+    },
+    {
+      "id": "C13",
+      "eje": "infra",
+      "t": "Rehabilitar 600 km de la red vial estatal",
+      "estado": "ejecucion",
+      "av": 70,
+      "plazo": "Dic. 2026",
+      "resp": "Ministerio de Transporte",
+      "meta": "600 km rehabilitados"
+    },
+    {
+      "id": "C14",
+      "eje": "infra",
+      "t": "Conectar 50.000 hogares a agua potable",
+      "estado": "ejecucion",
+      "av": 76,
+      "plazo": "Dic. 2026",
+      "resp": "Secretaría del Agua",
+      "meta": "50.000 hogares"
+    },
+    {
+      "id": "C15",
+      "eje": "infra",
+      "t": "Plan de mantenimiento vial con gobiernos locales",
+      "estado": "sin",
+      "av": 0,
+      "plazo": "2027",
+      "resp": "Ministerio de Transporte",
+      "meta": "Convenios firmados con 24 provincias"
+    }
+  ],
+  "hitos": [
+    {
+      "mes": 1,
+      "dia": 3,
+      "eje": "economia",
+      "tipo": "Normativa",
+      "t": "Decreto de austeridad del gasto corriente",
+      "x": "Fija límites a viáticos, publicidad y contrataciones no prioritarias en el Ejecutivo.",
+      "c": "C04"
+    },
+    {
+      "mes": 1,
+      "dia": 18,
+      "eje": "seguridad",
+      "tipo": "Gestión",
+      "t": "Instalación de la mesa interinstitucional de seguridad",
+      "x": "Coordina Policía, Fuerzas Armadas, Fiscalía y gobiernos locales con reuniones semanales.",
+      "c": "C01"
+    },
+    {
+      "mes": 2,
+      "dia": 7,
+      "eje": "salud",
+      "tipo": "Programa",
+      "t": "Lanzamiento de la campaña nacional de vacunación",
+      "x": "Brigadas en escuelas y centros de salud para completar esquemas atrasados.",
+      "c": "C07"
+    },
+    {
+      "mes": 2,
+      "dia": 22,
+      "eje": "infra",
+      "tipo": "Obra",
+      "t": "Inicio de la rehabilitación del tramo A",
+      "x": "Primer frente de obra de la meta de 600 km de vías rehabilitadas.",
+      "c": "C13"
+    },
+    {
+      "mes": 3,
+      "dia": 1,
+      "eje": "educacion",
+      "tipo": "Programa",
+      "t": "Entrega de kits escolares al inicio del año lectivo",
+      "x": "Distribución completa antes del primer día de clases.",
+      "c": "C10"
+    },
+    {
+      "mes": 3,
+      "dia": 19,
+      "eje": "seguridad",
+      "tipo": "Obra",
+      "t": "Inauguración de 3 Unidades de Policía Comunitaria",
+      "x": "Ubicadas en los sectores con mayor incidencia de delitos contra la vida.",
+      "c": "C02"
+    },
+    {
+      "mes": 4,
+      "dia": 10,
+      "eje": "economia",
+      "tipo": "Normativa",
+      "t": "Proyecto de ley de fomento al empleo juvenil enviado a la Asamblea",
+      "x": "Incentivos tributarios para la primera contratación formal de menores de 29 años.",
+      "c": "C05"
+    },
+    {
+      "mes": 4,
+      "dia": 28,
+      "eje": "infra",
+      "tipo": "Programa",
+      "t": "Convenios de agua potable con 12 municipios",
+      "x": "Cofinanciamiento de redes de distribución en zonas periurbanas.",
+      "c": "C14"
+    },
+    {
+      "mes": 5,
+      "dia": 6,
+      "eje": "salud",
+      "tipo": "Gestión",
+      "t": "Agendamiento digital en 40 centros de salud",
+      "x": "Citas por teléfono y web; primera etapa de la meta de 100 centros.",
+      "c": "C08"
+    },
+    {
+      "mes": 5,
+      "dia": 24,
+      "eje": "educacion",
+      "tipo": "Obra",
+      "t": "Repotenciación de 25 unidades educativas",
+      "x": "Cubiertas, baterías sanitarias y conectividad.",
+      "c": "C11"
+    },
+    {
+      "mes": 6,
+      "dia": 2,
+      "eje": "seguridad",
+      "tipo": "Normativa",
+      "t": "Publicación del reglamento de control de armas",
+      "x": "Endurece requisitos de tenencia y crea un registro digital único.",
+      "c": "C03"
+    },
+    {
+      "mes": 6,
+      "dia": 15,
+      "eje": "economia",
+      "tipo": "Gestión",
+      "t": "Primer informe trimestral de ejecución presupuestaria",
+      "x": "Publicado en datos abiertos con desglose por entidad.",
+      "c": "C04"
+    },
+    {
+      "mes": 7,
+      "dia": 9,
+      "eje": "infra",
+      "tipo": "Obra",
+      "t": "Finaliza el tramo A: 120 km rehabilitados",
+      "x": "Primer tramo entregado de la red vial estatal.",
+      "c": "C13"
+    },
+    {
+      "mes": 7,
+      "dia": 27,
+      "eje": "salud",
+      "tipo": "Programa",
+      "t": "Brigadas médicas rurales en 6 provincias",
+      "x": "Atención primaria itinerante en parroquias sin centro de salud.",
+      "c": "C07"
+    },
+    {
+      "mes": 8,
+      "dia": 5,
+      "eje": "educacion",
+      "tipo": "Programa",
+      "t": "Formación digital para 8.000 docentes",
+      "x": "Cursos certificados en línea con tutoría provincial.",
+      "c": "C12"
+    },
+    {
+      "mes": 8,
+      "dia": 20,
+      "eje": "economia",
+      "tipo": "Normativa",
+      "t": "Aprobación de la ley de fomento al empleo juvenil",
+      "x": "Publicada en Registro Oficial; el reglamento se expide en 90 días.",
+      "c": "C05"
+    },
+    {
+      "mes": 9,
+      "dia": 12,
+      "eje": "seguridad",
+      "tipo": "Gestión",
+      "t": "Videovigilancia integrada en 5 ciudades",
+      "x": "Cámaras municipales y estatales enlazadas al sistema de emergencias.",
+      "c": "C01"
+    },
+    {
+      "mes": 9,
+      "dia": 26,
+      "eje": "infra",
+      "tipo": "Programa",
+      "t": "15.000 hogares conectados a agua potable",
+      "x": "Corte parcial de la meta de 50.000 hogares.",
+      "c": "C14"
+    },
+    {
+      "mes": 10,
+      "dia": 8,
+      "eje": "salud",
+      "tipo": "Obra",
+      "t": "Apertura del primer hospital del día",
+      "x": "Cirugías ambulatorias y consulta de especialidad.",
+      "c": "C09"
+    },
+    {
+      "mes": 10,
+      "dia": 30,
+      "eje": "educacion",
+      "tipo": "Gestión",
+      "t": "Resultados de la evaluación de aprendizajes",
+      "x": "Línea base por provincia publicada para seguimiento anual.",
+      "c": "C12"
+    },
+    {
+      "mes": 11,
+      "dia": 14,
+      "eje": "economia",
+      "tipo": "Programa",
+      "t": "Apertura de la línea de crédito para pymes",
+      "x": "Primer desembolso por debajo de lo previsto por demoras en la calificación.",
+      "c": "C06"
+    },
+    {
+      "mes": 11,
+      "dia": 25,
+      "eje": "infra",
+      "tipo": "Obra",
+      "t": "Inicio de obras en el tramo B",
+      "x": "Segundo frente para completar la meta vial.",
+      "c": "C13"
+    },
+    {
+      "mes": 12,
+      "dia": 5,
+      "eje": "seguridad",
+      "tipo": "Gestión",
+      "t": "Balance anual de homicidios",
+      "x": "La tasa anualizada baja de 38 a 29 por 100.000 habitantes.",
+      "c": "C01"
+    },
+    {
+      "mes": 12,
+      "dia": 16,
+      "eje": "educacion",
+      "tipo": "Programa",
+      "t": "Becas de bachillerato técnico",
+      "x": "Convocatoria para estudiantes de colegios técnicos públicos.",
+      "c": "C12"
+    },
+    {
+      "mes": 12,
+      "dia": 28,
+      "eje": "salud",
+      "tipo": "Gestión",
+      "t": "La cobertura de vacunación llega a 88 %",
+      "x": "Siete puntos por debajo de la meta de 95 %.",
+      "c": "C07"
+    }
+  ],
+  "indicadores": [
+    {
+      "id": "hom",
+      "eje": "seguridad",
+      "n": "Homicidios intencionales",
+      "u": "por 100.000 hab.",
+      "mejor": "baja",
+      "meta": 25,
+      "dec": 1,
+      "serie": [
+        38,
+        37.2,
+        36.5,
+        35.1,
+        34.8,
+        33.2,
+        32.5,
+        31.9,
+        31,
+        30.2,
+        29.6,
+        29
+      ]
+    },
+    {
+      "id": "emp",
+      "eje": "economia",
+      "n": "Empleo adecuado",
+      "u": "% de la PEA",
+      "mejor": "sube",
+      "meta": 38,
+      "dec": 1,
+      "serie": [
+        33.1,
+        33.4,
+        33.2,
+        33.9,
+        34.2,
+        34.5,
+        34.4,
+        35,
+        35.3,
+        35.6,
+        35.8,
+        36.1
+      ]
+    },
+    {
+      "id": "vac",
+      "eje": "salud",
+      "n": "Cobertura de vacunación infantil",
+      "u": "%",
+      "mejor": "sube",
+      "meta": 95,
+      "dec": 0,
+      "serie": [
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        86,
+        87,
+        88
+      ]
+    },
+    {
+      "id": "esp",
+      "eje": "salud",
+      "n": "Espera para consulta externa",
+      "u": "días",
+      "mejor": "baja",
+      "meta": 10,
+      "dec": 0,
+      "serie": [
+        21,
+        21,
+        20,
+        19,
+        18,
+        18,
+        17,
+        16,
+        16,
+        15,
+        15,
+        14
+      ]
+    },
+    {
+      "id": "via",
+      "eje": "infra",
+      "n": "Vías rehabilitadas (acumulado)",
+      "u": "km",
+      "mejor": "sube",
+      "meta": 600,
+      "dec": 0,
+      "serie": [
+        0,
+        10,
+        35,
+        60,
+        85,
+        105,
+        120,
+        160,
+        220,
+        290,
+        350,
+        420
+      ]
+    },
+    {
+      "id": "agua",
+      "eje": "infra",
+      "n": "Hogares con agua potable nueva (acumulado)",
+      "u": "miles",
+      "mejor": "sube",
+      "meta": 50,
+      "dec": 1,
+      "serie": [
+        0,
+        0.5,
+        1.8,
+        3.5,
+        6,
+        9.2,
+        12,
+        13.8,
+        15,
+        22,
+        30,
+        38
+      ]
+    }
+  ]
+}
